@@ -35,7 +35,7 @@ function weatherForecast($woeid, $tempunit) {
     $rss->cache_time = 3600;
     
     // check if a temperature unit was specified
-    if ($tempunit == "f" || $tempunit == "c") {
+    if ($tempunit != "f" && $tempunit != "c") {
       // no unit was properly specified, default to Farenheit
       $tempunit = "f";
     }
